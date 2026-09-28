@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SDVirtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="site-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="180" height="38">
+          <defs>
+            <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0284c7;" />
+              <stop offset="100%" style="stop-color:#0f172a;" />
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="46" height="46" rx="12" fill="url(#badgeGrad)" />
+          <text x="25" y="32" font-family="'Poppins', sans-serif" font-weight="700" font-size="20" fill="#ffffff" text-anchor="middle">SD</text>
+          <text x="58" y="32" font-family="'Poppins', sans-serif" font-weight="700" font-size="22" fill="#0f172a">SD<tspan fill="#0284c7">Virtual</tspan></text>
+        </svg>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2>Let's discuss your project.</h2>
+        <p>Connect directly via email or social links below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Cards -->
+        <div class="contact-info-card">
+          <div class="availability" style="margin-bottom: 20px;">
+            <span class="status-dot"></span> Available for full-time &amp; contract roles
+          </div>
+
+          <div class="contact-channels">
+            
+            <!-- Email Copy Card -->
+            <div class="channel-card">
+              <div class="channel-info">
+                <div class="channel-icon">@</div>
+                <div class="channel-details">
+                  <label>EMAIL ADDRESS</label>
+                  <span id="emailAddr">shergeonderosa11@gmail.com</span>
+                </div>
+              </div>
+              <button class="copy-btn" onclick="navigator.clipboard.writeText('shergeonderosa11@gmail.com'); alert('Email copied!');">Copy</button>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/shergeon-de-rosa/" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-info">
+                <div class="channel-icon">in</div>
+                <div class="channel-details">
+                  <label>LINKEDIN PROFILE</label>
+                  <span>Shergeon De Rosa</span>
+                </div>
+              </div>
+              <span class="action-arrow">→</span>
+            </a>
+
+            <!-- Facebook Card -->
+            <a href="https://www.facebook.com/derosa.shergeon/" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-info">
+                <div class="channel-icon">FB</div>
+                <div class="channel-details">
+                  <label>FACEBOOK PROFILE</label>
+                  <span>Shergeon De Rosa</span>
+                </div>
+              </div>
+              <span class="action-arrow">→</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card">
+          <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been submitted.');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" class="form-control" placeholder="How can Shergeon assist you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrapper">
+      <div>
+        <a href="index.html" class="footer-logo">SD<span style="color: #38bdf8;">Virtual</span></a>
+      </div>
+      <p>© 2026 Shergeon De Rosa. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
