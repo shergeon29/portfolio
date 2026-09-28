@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | SDVirtual - Data Entry &amp; Virtual Assistance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="site-logo" aria-label="SDVirtual Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="180" height="38">
+          <defs>
+            <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0284c7;" />
+              <stop offset="100%" style="stop-color:#0f172a;" />
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="46" height="46" rx="12" fill="url(#badgeGrad)" />
+          <text x="25" y="32" font-family="'Poppins', sans-serif" font-weight="700" font-size="20" fill="#ffffff" text-anchor="middle">SD</text>
+          <text x="58" y="32" font-family="'Poppins', sans-serif" font-weight="700" font-size="22" fill="#0f172a">SD<tspan fill="#0284c7">Virtual</tspan></text>
+        </svg>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">PORTFOLIO</span>
+        <h2>Featured Work &amp; Case Studies</h2>
+        <p>Demonstrating structured trackers, form-to-sheet workflows, database cleaning, and targeted research.</p>
+      </div>
+
+      <!-- NEW: Filter Buttons -->
+      <div class="portfolio-filter">
+        <button class="filter-btn active" onclick="filterProjects('all')">All Work</button>
+        <button class="filter-btn" onclick="filterProjects('spreadsheets')">Spreadsheet Trackers</button>
+        <button class="filter-btn" onclick="filterProjects('automation')">Data Automation</button>
+        <button class="filter-btn" onclick="filterProjects('cleaning')">Data Cleaning</button>
+        <button class="filter-btn" onclick="filterProjects('research')">Web Research</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1: Healthcare Tracker -->
+        <article class="project-card" data-category="spreadsheets">
+          <div class="project-preview">
+            <img src="assets/images/project-1.jpg" alt="Healthcare Availment Tracker">
+            <span class="badge">Case Study</span>
+          </div>
+          <div class="project-content">
+            <span class="project-type">SPREADSHEET MANAGEMENT</span>
+            <h3>Healthcare Availment Tracker</h3>
+            <p>A multi-tab system managing member health availment requests with real-time status updates and automated formula lookups.</p>
+            
+            <div class="project-impact">
+              <div class="impact-item">
+                <strong>Challenge:</strong> Unstructured member request logs causing delayed processing times.
+              </div>
+              <div class="impact-item">
+                <strong>Solution:</strong> Built dynamic lookup formulas (XLOOKUP/VLOOKUP), data validation dropdowns, and automated highlight flags.
+              </div>
+              <div class="impact-item">
+                <strong>Outcome:</strong> Reduced processing delays by 40% and eliminated duplicate record entries.
+              </div>
+            </div>
+
+            <span class="project-tools">Google Sheets • VLOOKUP / XLOOKUP • Conditional Formatting • Data Validation</span>
+            
+            <div class="project-actions">
+              <a href="#" class="btn-link" onclick="alert('Demo spreadsheet link or PDF view can be attached here.'); return false;">View Sample Breakdown →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Google Forms Intake -->
+        <article class="project-card" data-category="automation">
+          <div class="project-preview">
+            <img src="assets/images/project-2.jpg" alt="Google Forms Intake System">
+            <span class="badge">Automation</span>
+          </div>
+          <div class="project-content">
+            <span class="project-type">DATA AUTOMATION</span>
+            <h3>Google Forms Intake &amp; Ticket System</h3>
+            <p>End-to-end request collection pipeline mapping online form submissions directly into categorized master datasets.</p>
+            
+            <div class="project-impact">
+              <div class="impact-item">
+                <strong>Challenge:</strong> Manual entry of incoming customer requests led to typos and lost tickets.
+              </div>
+              <div class="impact-item">
+                <strong>Solution:</strong> Integrated Google Forms directly with formatted Google Sheets with structured automated timestamps and status tags.
+              </div>
+              <div class="impact-item">
+                <strong>Outcome:</strong> 100% data capture accuracy and real-time visibility for operational teams.
+              </div>
+            </div>
+
+            <span class="project-tools">Google Forms • Google Sheets • Workflow Automation • Email Alerts</span>
+            
+            <div class="project-actions">
+              <a href="#" class="btn-link" onclick="alert('Demo form link or workflow diagram can be attached here.'); return false;">View Workflow Diagram →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW Project 3: Data Cleaning Case Study -->
+        <article class="project-card" data-category="cleaning">
+          <div class="project-preview">
+            <div class="before-after-preview">
+              <div class="preview-box raw">❌ Raw Data (Duplicates &amp; Inconsistent)</div>
+              <div class="preview-box clean">✅ Cleaned Master File (Standardized)</div>
+            </div>
+            <span class="badge">Data Audit</span>
+          </div>
+          <div class="project-content">
+            <span class="project-type">DATA CLEANING &amp; AUDITING</span>
+            <h3>5,000+ Contact CRM Audit &amp; Deduplication</h3>
+            <p>Audited and standardized a messy customer CRM database, removing duplicates, correcting formatting errors, and splitting lead details.</p>
+            
+            <div class="project-impact">
+              <div class="impact-item">
+                <strong>Challenge:</strong> Inconsistent phone formats, missing area codes, and duplicate contact entries across 5k+ rows.
+              </div>
+              <div class="impact-item">
+                <strong>Solution:</strong> Used Advanced Excel formulas (`TRIM`, `PROPER`, `TEXTJOIN`, `REGEX`) to parse and clean messy records.
+              </div>
+              <div class="impact-item">
+                <strong>Outcome:</strong> Delivered a pristine, launch-ready lead database with 0 duplicate entries.
+              </div>
+            </div>
+
+            <span class="project-tools">MS Excel • TRIM &amp; PROPER Functions • Deduplication • Text-to-Columns</span>
+
+            <div class="project-actions">
+              <a href="#" class="btn-link" onclick="alert('Before & After sample screenshot can be linked here.'); return false;">View Before &amp; After →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW Project 4: Web Research & Lead Generation -->
+        <article class="project-card" data-category="research">
+          <div class="project-preview">
+            <img src="assets/images/project-1.jpg" alt="B2B Market Research & Lead List Building">
+            <span class="badge">Research</span>
+          </div>
+          <div class="project-content">
+            <span class="project-type">WEB RESEARCH &amp; LEAD LISTS</span>
+            <h3>B2B Executive Prospect Research</h3>
+            <p>Targeted web research compiling verified decision-maker contact details, company profiles, and social links into structured lead lists.</p>
+            
+            <div class="project-impact">
+              <div class="impact-item">
+                <strong>Challenge:</strong> Need verified B2B prospect contacts across specific target industries.
+              </div>
+              <div class="impact-item">
+                <strong>Solution:</strong> Conducted manual web sourcing, email verification, and company size auditing.
+              </div>
+              <div class="impact-item">
+                <strong>Outcome:</strong> Delivered 250+ verified lead records with zero bounce rates on email outreach.
+              </div>
+            </div>
+
+            <span class="project-tools">Web Scraping / Research • LinkedIn • Email Verification Tools • MS Excel</span>
+
+            <div class="project-actions">
+              <a href="#" class="btn-link" onclick="alert('Sample non-confidential lead sheet preview can be linked here.'); return false;">View Sample Lead Sheet →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- NEW: Highlights / Testimonials Section -->
+      <div class="testimonials-block" style="margin-top: 64px;">
+        <div class="section-heading">
+          <span class="eyebrow">QUALITY GUARANTEE</span>
+          <h2>How I Approach Every Project</h2>
+        </div>
+        <div class="quality-grid">
+          <div class="quality-card">
+            <h4>🎯 100% Accuracy Focus</h4>
+            <p>Every dataset undergoes dual-pass auditing before delivery to ensure zero errors in formulas, text, or figures.</p>
+          </div>
+          <div class="quality-card">
+            <h4>🔐 Strict Confidentiality</h4>
+            <p>Your client data and internal metrics remain private and secure at all times under strict NDA practices.</p>
+          </div>
+          <div class="quality-card">
+            <h4>⏱️ On-Time Delivery</h4>
+            <p>Consistent compliance with deadlines with clear progress reports along the way.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CTA Banner -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <span class="eyebrow" style="color: #38bdf8;">HAVE A CUSTOM TASK?</span>
+      <h2>Let's discuss your data management needs</h2>
+      <p>Whether you need a one-time spreadsheet cleanup or ongoing administrative support, I'm ready to assist.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+        <a href="contact.html" class="btn btn-light">Get in Touch</a>
+        <a href="about.html" class="btn btn-secondary" style="background: transparent; color: white; border-color: var(--slate-600);">Learn More About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrapper">
+      <div>
+        <a href="index.html" class="footer-logo">SD<span style="color: #38bdf8;">Virtual</span></a>
+        <p style="font-size: 0.85rem; color: var(--slate-400); margin-top: 4px;">Data Entry &amp; Virtual Assistance</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p>© 2026 Shergeon De Rosa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Optional Light Filter Script -->
+  <script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
